@@ -1,6 +1,7 @@
 import pandas as pd
 import torch
 
+from src.data_generator import generate_dataset
 from src.preprocessing import preprocess, create_sequences
 from src.sarima_model import train_sarima
 from src.lstm_model import LSTM
@@ -10,7 +11,9 @@ from src.metrics import rmse, mae, mape
 from src.optuna_tuner import tune
 
 # Load data
-df = pd.read_csv("data/synthetic_timeseries.csv")
+# Generate dataset programmatically (required by assignment)
+df = generate_dataset(n_points=6000)
+df.to_csv("data/synthetic_timeseries.csv", index=False)
 scaled, _ = preprocess(df)
 
 X, y = create_sequences(scaled)

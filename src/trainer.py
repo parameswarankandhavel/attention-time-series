@@ -8,10 +8,21 @@ def train_model(model, X, y, epochs=20, lr=0.001):
     X_t = torch.tensor(X, dtype=torch.float32)
     y_t = torch.tensor(y, dtype=torch.float32)
 
+    model.train()
     for epoch in range(epochs):
         optimizer.zero_grad()
-        preds = model(X_t).squeeze()
+
+        output = model(X_t)
+
+        # Handle AttentionLSTM (returns output, weights)
+        if isinstance(output, tuple):
+            preds = output[0]
+        else:
+            preds = output
+
+        preds = preds.squeeze()
         loss = loss_fn(preds, y_t)
+
         loss.backward()
         optimizer.step()
 
