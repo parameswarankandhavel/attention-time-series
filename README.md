@@ -190,7 +190,7 @@ attention-time-series/
 
 ---
 
-## ▶ How to Run the Project
+##  How to Run the Project
 
 ### 1 Install dependencies
 
