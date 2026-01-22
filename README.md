@@ -1,6 +1,6 @@
-# 🔮 Attention-based Time Series Forecasting with Deep Learning
+#  Attention-based Time Series Forecasting with Deep Learning
 
-## 📌 Project Overview
+##  Project Overview
 
 This project implements an **advanced multivariate time series forecasting system** using deep learning models and attention mechanisms.
 The primary objective is to **move beyond black-box forecasting** by integrating **attention-based interpretability**, allowing us to understand *which historical time steps the model prioritizes during prediction*.
@@ -15,7 +15,7 @@ The project includes:
 
 ---
 
-## 📊 Dataset Description
+##  Dataset Description
 
 A **synthetic yet realistic multivariate time series dataset** is programmatically generated to simulate electricity consumption behavior.
 
@@ -60,7 +60,7 @@ data/synthetic_timeseries.csv
 
 ---
 
-## 🧪 Data Validation & Sanity Checks
+##  Data Validation & Sanity Checks
 
 Before modeling, the dataset is validated to ensure correctness:
 
@@ -72,7 +72,7 @@ These checks confirm the dataset is suitable for downstream modeling and evaluat
 
 ---
 
-## ⚙️ Preprocessing Pipeline
+##  Preprocessing Pipeline
 
 1. **Min-Max scaling** across all features
 2. **Sliding window sequence generation**
@@ -84,19 +84,19 @@ This preprocessing preserves temporal ordering and prevents data leakage.
 
 ---
 
-## 🤖 Models Implemented
+##  Models Implemented
 
-### 1️⃣ SARIMA (Statistical Baseline)
+### 1 SARIMA (Statistical Baseline)
 
 * Seasonal ARIMA with daily seasonality (24-hour cycle)
 * Serves as a traditional benchmark for comparison
 
-### 2️⃣ Standard LSTM
+### 2 Standard LSTM
 
 * Captures nonlinear temporal dependencies
 * Serves as a deep learning baseline
 
-### 3️⃣ Attention-based LSTM (Primary Model)
+### 3 Attention-based LSTM (Primary Model)
 
 * LSTM encoder with **learned attention mechanism**
 * Attention weights quantify the importance of each time step
@@ -104,7 +104,7 @@ This preprocessing preserves temporal ordering and prevents data leakage.
 
 ---
 
-## 🔍 Bayesian Hyperparameter Optimization
+##  Bayesian Hyperparameter Optimization
 
 Hyperparameter tuning is performed using **Optuna**, implementing **Bayesian optimization**.
 
@@ -122,7 +122,7 @@ This approach is significantly more efficient and principled than grid search.
 
 ---
 
-## 📈 Model Evaluation
+##  Model Evaluation
 
 Models are evaluated using standard time series regression metrics:
 
@@ -143,7 +143,7 @@ The Attention-LSTM demonstrates competitive performance compared to both SARIMA 
 
 ---
 
-## 🧠 Attention-based Interpretability
+##  Attention-based Interpretability
 
 One of the core contributions of this project is **model interpretability**.
 
@@ -168,7 +168,7 @@ t-20 with weight 0.0418
 
 ---
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 attention-time-series/
@@ -190,21 +190,21 @@ attention-time-series/
 
 ---
 
-## ▶️ How to Run the Project
+## ▶ How to Run the Project
 
-### 1️⃣ Install dependencies
+### 1 Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Generate dataset
+### 2 Generate dataset
 
 ```bash
 python data/data_generator.py
 ```
 
-### 3️⃣ Run full pipeline
+### 3 Run full pipeline
 
 ```bash
 python main.py
@@ -220,7 +220,7 @@ This executes:
 
 ---
 
-## ✅ Key Takeaways
+##  Key Takeaways
 
 * Attention mechanisms improve **both performance and interpretability**
 * Bayesian optimization enables efficient hyperparameter tuning
@@ -229,7 +229,7 @@ This executes:
 
 ---
 
-## 🏁 Final Notes
+##  Final Notes
 
 This project satisfies all requirements for an **advanced time series forecasting assignment**, including:
 
